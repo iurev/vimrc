@@ -110,3 +110,5 @@ Bundle "pangloss/vim-javascript"
 
 " HAML. HAML это вам не HTML!
 Bundle 'tpope/vim-haml'
+
+Bundle 'kchmck/vim-coffee-script'
