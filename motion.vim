@@ -1,10 +1,24 @@
-" Переход в конец строки в режиме ввода
-imap á <C-o>A
 " Возможность юзать перемещение в режиме ввода - нужно использовать Альт+ролд
-imap ì <C-o>l
-imap ë <C-o>k
-imap ê <C-o>j
-imap è <C-o>h
+" A-l
+imap <A-l> <C-o>l
+" A-k
+imap <A-k> <C-o>k
+" A-j
+imap <A-j> <C-o>j
+" A-h
+imap <A-h> <C-o>h
+" A-w
+imap <A-w> <C-o>w
+" A-e
+imap <A-e> <C-o>e
+" A-b
+imap <A-b> <C-o>b
+" A-A
+imap <A-a> <C-o>A
+" A-I
+imap <A-i> <C-o>I
+" A-c
+imap <A-c> <C-o>C
 " Перезагрузка конфига
 map <F8> :so ~/.vimrc<cr>
 " Открытие редактирования вима при вводе :evim
@@ -24,9 +38,9 @@ nmap <C-o>f :w<enter>:!firefox -new-tab %<enter>
 nmap ZO :w<enter>:!opera -newtab %<enter>
 nmap ZC :w<enter>:!chromium-browser --new-tab %<enter>
 nmap ZF :w<enter>:!firefox -new-tab %<enter>
-"Сохранение на Ctrl+R
-nmap <C-i> :w<CR>
-" imap <C-i> <Esc>:w<CR>a
+"Сохранение на Ctrl+s
+nmap <C-s> :w<CR>
+imap <C-s> <C-o>:w<CR>
 "Подтверждение на сохранение закрываемого файла
 set confirm
 "Включает возможность использовать 'внутреннюю' раскладку
