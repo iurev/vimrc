@@ -30,7 +30,7 @@ map <F2> :buffers<enter>
 imap шш <esc>
 imap ii <esc>
 "Пробел в нормальном режиме перелистывает страницу вниз
-nmap <Space> <PageDown>
+nmap <Space> zz
 "Открытие текущего файла в браузере
 nmap <C-o>o :w<enter>:!opera -newtab %<enter>
 nmap <C-o>c :w<enter>:!chromium-browser --new-tab %<enter>
