@@ -101,6 +101,7 @@ Bundle 'ack.vim'
 
 " Улучшенная статусная линия 
 Bundle 'https://github.com/Lokaltog/vim-powerline.git'
+set laststatus=2
 
 " Улучшенная подсветка синтаксиса Javascript
 Bundle 'https://github.com/jelera/vim-javascript-syntax.git'
