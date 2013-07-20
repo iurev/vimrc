@@ -123,3 +123,10 @@ Bundle 'rom399/vim-colorsheme-scroller'
 
 " Очень-очень много цветовых схем для VIM
 Bundle 'flazz/vim-colorschemes'
+
+" Много-много сниппетов для самых разных языков
+Bundle 'honza/vim-snippets'
+
+" Удобное разворачивание текущего буфера на весь экран
+" и сворачивание. Активируется по нажатию <C-w>-o
+Bundle 'ZoomWin'
