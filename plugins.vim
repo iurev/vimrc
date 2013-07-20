@@ -112,4 +112,14 @@ Bundle "pangloss/vim-javascript"
 " HAML. HAML это вам не HTML!
 Bundle 'tpope/vim-haml'
 
+" Работа с CoffeeScript
 Bundle 'kchmck/vim-coffee-script'
+
+" Подсветка синтаксиса
+Bundle 'scrooloose/syntastic'
+
+" Простой способ прокрутить все существующие темы
+Bundle 'rom399/vim-colorsheme-scroller'
+
+" Очень-очень много цветовых схем для VIM
+Bundle 'flazz/vim-colorschemes'

@@ -1,7 +1,7 @@
 if has('gui_running')
 	syntax enable		"Подсветка синтаксиса
 	" set background=light
-	colorscheme Earthsonglight "Выбор темы solarized
+	colorscheme obsidian2
 else
 	colorscheme default
 endif
