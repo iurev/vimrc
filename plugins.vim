@@ -130,3 +130,5 @@ Bundle 'honza/vim-snippets'
 " Удобное разворачивание текущего буфера на весь экран
 " и сворачивание. Активируется по нажатию <C-w>-o
 Bundle 'ZoomWin'
+
+Bundle 'motemen/git-vim'
