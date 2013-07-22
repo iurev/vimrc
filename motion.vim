@@ -30,6 +30,9 @@ vmap <c-]> >gv
 " отступов работал esc
 nmap <esc> <C-c>
 vmap <esc> <C-c>
+" Переключение буферов вперед-назад
+nmap <S-Space> :bp<enter>
+nmap <C-Space> :bn<enter>
 " Перезагрузка конфига
 map <F8> :so ~/.vimrc<cr>
 " Открытие редактирования вима при вводе :evim
