@@ -77,3 +77,20 @@ vmap <silent> <C-L> <Esc>a<C-^><Esc><CR>gv
 set clipboard=unnamed
 " Подсветка всех слов, одинаковых с тем, на который был наведен курсор
 autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))
+" При поиске подсвеченное слово устанавливать 
+" по центру экрана
+nmap n nzz
+nmap N Nzz
+nmap * *zz
+nmap # #zz
+nmap g* g*zz
+nmap g# g#zz
+" Открывает список буферов, начинает печатать :b,
+" чтобы можно было выбрать номер буфера
+nmap <M-b> :ls<enter>:b
+" Перемещение на страницу вверх-вниз,
+" установление текущей линии по-центру
+nmap <M-j> <PageDown>zz
+nmap <M-k> <PageUp>zz
+
+nmap G Gzz

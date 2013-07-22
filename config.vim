@@ -41,3 +41,6 @@ set smartcase
 set encoding=utf-8
 "Возможные кодировки файлов и порядок их открытия
 set fileencodings=utf-8,cp1251
+" Не создавать файлов бэкапа и своп-файлы
+set nobackup
+set noswapfile
