@@ -1,6 +1,5 @@
 if has('gui_running')
-	syntax enable		"Подсветка синтаксиса
-	" set background=light
+	syntax enable
 	colorscheme obsidian2
 else
 	colorscheme default
@@ -14,17 +13,17 @@ set guioptions-=T " отключаем панель инструментов
 set guioptions-=m " отключаем меню
 set guioptions-=m " отключаем меню
 set guioptions-=e " отключаем меню
-"Установка шрифта monofur 18
+" Установка шрифта monofur 18
 set guifont=Ubuntu\ Mono\ 15
-"Включить нумерацию строк слева
+" Включить нумерацию строк слева
 :set number
 "При запуске гуишный vim раскрывается на весь экран
 if has("gui_running")
   au GUIEnter * :set lines=99999 columns=99999
 end
-"Показывать вводимые после ":" комманды без задержки
+" Показывать вводимые после ":" комманды без задержки
 set showcmd 
-"Включена поддержка синтаксиса
+" Включена поддержка синтаксиса
 syntax on
-"Установить ширину NERDTree в 15 чего-то там
+" Установить ширину NERDTree в 15 чего-то там
 let g:NERDTreeWinSize = 15
