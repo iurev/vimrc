@@ -5,7 +5,6 @@ imap <A-k> <C-o>k
 imap <A-j> <C-o>j
 imap <A-h> <C-o>h
 imap <A-w> <C-o>w
-imap <A-e> <C-o>e
 imap <A-b> <C-o>b
 imap <A-a> <C-o>A
 imap <A-i> <C-o>I
