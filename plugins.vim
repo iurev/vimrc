@@ -148,7 +148,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'ZoomWin'
 
 " Работа с Git
-Bundle 'motemen/git-vim'
+Bundle 'tpope/vim-fugitive'
 
 " Красивая прокрутка страницы
 Bundle 'Smooth-Scroll'
