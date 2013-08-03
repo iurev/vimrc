@@ -66,3 +66,9 @@ nmap <M-o> <S-o><esc>
 " после запятой автоматически добавляется 
 " пробел! 
 imap , , 
+" Перемещение строк
+nmap <s-j> ddp
+nmap <s-k> ddkP
+" И символов
+nmap <s-h> xhhp
+nmap <s-l> xp
