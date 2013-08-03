@@ -27,3 +27,5 @@ set showcmd
 syntax on
 " Установить ширину NERDTree в 15 чего-то там
 let g:NERDTreeWinSize = 15
+" Отключение мигания курсора
+:set guicursor+=a:blinkon0
