@@ -18,12 +18,14 @@ if has("autocmd")
      " Для отличных от стандартных типов файлов устанавливаем различные отступы
      autocmd FileType html setlocal ts=2 sts=2 sw=2 noet
      autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+     autocmd FileType php setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType eruby setlocal ts=2 sts=2 sw=2 noet
      autocmd FileType yaml setlocal ts=2 sts=2 sw=2 noet
      autocmd FileType haml setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType sass setlocal ts=2 sts=2 sw=2 noet
      autocmd FileType coffee setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+     autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
      au! BufRead,BufNewFile *.sass         setfiletype sass 
      au! BufRead,BufNewFile *.haml         setfiletype haml 
      au! BufRead,BufNewFile *.coffee         setfiletype coffee
@@ -57,4 +59,5 @@ set imsearch=0
 " Для вставки использовать системный буфер обмена
 set clipboard=unnamed
 " Подсветка всех слов, одинаковых с тем, на который был наведен курсор
-autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))
+" ( временно заключил в комменты, т.к. не сочетается с темой solarized light )
+" autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))

@@ -1,6 +1,6 @@
 if has('gui_running')
 	syntax enable
-	colorscheme obsidian2
+	colorscheme solarized
 else
 	colorscheme default
 endif
