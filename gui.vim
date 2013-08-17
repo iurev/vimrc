@@ -1,6 +1,6 @@
 if has('gui_running')
 	syntax enable
-	colorscheme solarized
+	colorscheme molokai
 else
 	colorscheme default
 endif
@@ -28,4 +28,8 @@ syntax on
 " Установить ширину NERDTree в 15 чего-то там
 let g:NERDTreeWinSize = 15
 " Отключение мигания курсора
-:set guicursor+=a:blinkon0
+set guicursor+=a:blinkon0
+" Отключить тильды (~) на пустых строчках
+" на самом деле, они останутся, но их цвет будет совпадать
+" с цветом фона
+hi NonText guifg=bg

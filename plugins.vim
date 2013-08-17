@@ -155,12 +155,13 @@ Bundle 'kchmck/vim-coffee-script'
 " Проверка синтаксиса
 Bundle 'scrooloose/syntastic'
 
-" Простой способ быстро посмотреть все установленные
-" темы
-Bundle 'rom399/vim-colorsheme-scroller'
-
-" Очень-очень много цветовых схем для VIM
-Bundle 'flazz/vim-colorschemes'
+" Избранные цветовые схемы для VIM.
+Bundle 'tomasr/molokai'
+Bundle 'altercation/vim-colors-solarized'
+" Кроме них мне также нравятся obsidian2,
+" oceanlight, night, inkpot, maroloccio,
+" manuscript, jellybeans, Lavender, Iceberg,
+" Goldfish
 
 " Много-много сниппетов для самых разных языков
 " ( после их установки обязательно нужно удалить
@@ -173,3 +174,9 @@ Bundle 'ZoomWin'
 
 " Работа с Git
 Bundle 'tpope/vim-fugitive'
+
+" Работа с форматом rabl
+Bundle 'yaymukund/vim-rabl'
+
+" Удобные отступы по запятым, двоеточиям, табам и т.п
+Bundle 'junegunn/vim-easy-align'

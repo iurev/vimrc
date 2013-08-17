@@ -57,8 +57,8 @@ nnoremap <c-u> <c-u>zz
 " строчка устанавливается по-центру
 nmap G Gzz
 " Перемещение между вкладками
-nmap <M-n> :tabp<enter>
-nmap <M-m> :tabn<enter>
+nmap <s-h> :tabp<enter>
+nmap <s-l> :tabn<enter>
 " Создание сверху пустой строки и переход
 " в нормальный режим
 nmap <M-o> <S-o><esc>
@@ -69,6 +69,14 @@ imap , ,
 " Перемещение строк
 nmap <s-j> ddp
 nmap <s-k> ddkP
-" И символов
-nmap <s-h> xhhp
-nmap <s-l> xp
+" Перемещение между сплитами
+nmap <m-h> <c-w>h
+nmap <m-k> <c-w>k
+nmap <m-l> <c-w>l
+nmap <m-j> <c-w>j
+" Закрытие сплита
+nmap <m-c> <c-w>c
+" Удаление буфера (к сожалению, удаляется и сплит)
+nmap <m-d> :bd<cr>
+" Открытие новой вкладки
+nmap <c-t> :tabnew<cr>
