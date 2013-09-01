@@ -11,7 +11,7 @@ set incsearch
 set hidden
 " Умные отступы
 set smartindent
-" Устанавливаем другие отступы  
+" Устанавливаем другие отступы
 if has("autocmd")
      " Включаем определение типов файлов
      filetype off
@@ -26,8 +26,8 @@ if has("autocmd")
      autocmd FileType coffee setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType css setlocal ts=4 sts=4 sw=4 expandtab
-     au! BufRead,BufNewFile *.sass         setfiletype sass 
-     au! BufRead,BufNewFile *.haml         setfiletype haml 
+     au! BufRead,BufNewFile *.sass         setfiletype sass
+     au! BufRead,BufNewFile *.haml         setfiletype haml
      au! BufRead,BufNewFile *.coffee         setfiletype coffee
 endif
 " Автоперезагружать измененные файлы
@@ -46,18 +46,23 @@ set noswapfile
 " Подтверждение на сохранение закрываемого файла
 set confirm
 " Включает возможность использовать 'внутреннюю' раскладку
-" клавиатур. При включенной русской системной раскладке 
+" клавиатур. При включенной русской системной раскладке
 " VIM по-прежнему работает только в режиме ввода
 " В ВикиУчебнике написан способ, который может заставить
 " работать VIM при включенной системной раскладке
-" но вместо этого я использую клевейшую функцию - 
-" 'для каждого окна своя раскладка'
+" но вместо этого я использую клевейшую функцию -
+" 'для каждого окна своя раскладка
 set keymap=russian-jcukenwin
 " По-умолчанию поиск и вставка будут происходить на английском языке
-set iminsert=0	
+set iminsert=0
 set imsearch=0
 " Для вставки использовать системный буфер обмена
 set clipboard=unnamed
 " Подсветка всех слов, одинаковых с тем, на который был наведен курсор
 " ( временно заключил в комменты, т.к. не сочетается с темой solarized light )
-" autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<cword>'))
+" autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand('<>'))
+" Все комманды выполняются из zsh
+set shell=zsh\ -i
+" При скроллинге VIM будет держать курсор всегда на 5 строк выше
+" верхней-нижней линий
+set scrolloff=5
