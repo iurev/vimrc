@@ -14,14 +14,9 @@ Bundle 'EasyMotion'
 " редкоиспользуемые клавиши
 nmap s \\f
 nmap S \\F
-vmap s \\f
-vmap S \\F
 nmap B \\b
 nmap W \\w
-vmap B \\b
-vmap W \\w
 nmap E \\e
-vmap E \\e
 " Переназначил клавиши быстрого доступа так,
 " чтобы последние клавиши было удобнее всего жать
 let g:EasyMotion_keys = "abcdefghpqrstvwxyz.,mnouilkj"
@@ -39,22 +34,34 @@ Bundle 'ctrlp.vim'
 " Так было сказано сделать в описании к CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Открытие CtrlPBuffer
-nmap gb :CtrlPBuffer<cr>
-nmap gl :CtrlPLine<cr>
+nmap <space>b :CtrlPBuffer<cr>
+nmap <space>l :CtrlPLine<cr>
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|tmp$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
+" Полезности для RoR - быстрые сочетания клавиш для
+" открытия нужных контроллеров, представлений и тп
+nmap <space>m <c-p>model/
+nmap <space><space> <c-p>
+nmap <space>vv <c-p>views/
+nmap <space>vs <c-p>views/show<left><left><left><left>
+nmap <space>ve <c-p>views/edit<left><left><left><left>
+nmap <space>vn <c-p>views/new<left><left><left>
+nmap <space>vi <c-p>views/index<left><left><left><left><left>
+nmap <space>vf <c-p>views/form<left><left><left><left>
+nmap <space>c <c-p>controllers/
+nmap <space>s <c-p>spec/
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Комментирование
 Bundle 'tComment'
 nmap <C-k> gcc
-vmap <C-k> gc
-imap <C-k> <esc>gcc
-nmap cs gcc
+vmap ,s gc
+nmap ,s gcc
+nmap ,l gc
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
@@ -75,68 +82,46 @@ Bundle 'matchit.zip'
 " Дерево отмен
 Bundle 'https://github.com/mbbill/undotree.git'
 " Показывает историю отмен при нажатии на <F5>
-nnoremap <F5> :UndotreeToggle<cr>
+nmap <Space>u :UndotreeToggle<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Дерево файлов слева (можно и справа и вообще где угодно)
 Bundle 'The-NERD-tree'
 nmap <C-n> :NERDTreeToggle<cr>
-nmap gn :NERDTreeToggle<cr>
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Делает исходные коды красивыми и няшными одним нажатием клавиш
-Bundle 'maksimr/vim-jsbeautify'
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Клевая вещь - показывает, благодаря гиту, какие строки
 " были добавлены, изменены
 Bundle 'airblade/vim-gitgutter'
-nmap <F7> :GitGutterToggle<enter>
+nmap <Space>g :GitGutterToggle<enter>
 let g:gitgutter_enabled = 0
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Улучшенная статусная линия
 Bundle 'bling/vim-airline'
+" Замена стандартных табов на табы airline
+let g:airline#extensions#tabline#enabled = 1
 " Чтобы статусная строка отображалась всегда
 set laststatus=2
-let g:airline_theme='tomorrow'
+let g:airline_theme='solarized'
 " Использовать красивые значки для панели - нужно установить
 " шрифты
 let g:airline_powerline_fonts = 1
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
-" Сниппеты
-Bundle 'snipMate'
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
 " Показывает отступы
 Bundle 'nathanaelkane/vim-indent-guides'
-nmap zv \ig
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Очень клевая нумерация строк
-Bundle 'myusuf3/numbers.vim'
-nmap zn :NumbersToggle<CR>
-let g:enable_numbers = 0
+nmap <space>t \ig
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Удаление текущего буфера без удаления сплитов
 Bundle 'rbgrouleff/bclose.vim'
 nmap <m-d> :Bclose<cr>
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Предпросмотр открытых буферов и навигация по ним
-Bundle 'itchyny/thumbnail.vim'
-nmap zo :Thumbnail<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
@@ -153,12 +138,13 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 " вставлять, показывать предпросмотр. То есть, все то, что
 " должен уметь файловый менеджер.
 Bundle 'mbbill/VimExplorer'
+nmap <Space>e :VE<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Поиск
 Bundle 'mileszs/ack.vim'
-nmap ,a :Ack<space>
+nmap <Space>a :Ack<space>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
@@ -173,11 +159,37 @@ Bundle 'oceanlight'
 " Goldfish
 "-----------------------------------------------------------
 
+"-----------------------------------------------------------
+" Работа с окружающими парными символами
+" и тегами в VIM
+Bundle 'tpope/vim-surround'
+nmap ," cs'"
+nmap ,' cs"'
+"-----------------------------------------------------------
+
+"-----------------------------------------------------------
+" Автосохранение
+Bundle 'vim-auto-save'
+let g:auto_save = 1
+"-----------------------------------------------------------
+
+"-----------------------------------------------------------
+" Rails
+Bundle 'tpope/vim-rails'
+Bundle 'rails.vim'
+"-----------------------------------------------------------
+
+"-----------------------------------------------------------
+" Переключение true-false, старого и нового стилей
+" хэшей в Ruby
+Bundle 'zef/vim-cycle'
+"-----------------------------------------------------------
+
 " Автоподсветка поиска
 Bundle 'IndexedSearch'
 
 " Какие-то улучшения для Ruby
-Bundle 'ruby.vim'
+Bundle 'vim-ruby/vim-ruby'
 
 " Плагин для рельс
 Bundle 'rails.vim'
@@ -218,11 +230,15 @@ Bundle 'junegunn/vim-easy-align'
 " Увеличение-уменьшение числа под курсором
 Bundle 'Increment-and-Decrement-number'
 
-" Переключение true-false, старого и нового стилей
-" хэшей в Ruby
-Bundle 'AndrewRadev/switch.vim'
-nnoremap - :Switch<cr>
-
 " Изменено поведение клавиш F, f, t, T
 " а также освободились ';' и ','
 Bundle 'rhysd/clever-f.vim'
+
+" Автодополнение из Eclipse для Ruby
+Bundle 'dansomething/vim-eclim'
+
+" Повторение для surround VIM
+Bundle 'tpope/vim-repeat'
+
+" Делает исходные коды красивыми и няшными одним нажатием клавиш
+Bundle 'maksimr/vim-jsbeautify'

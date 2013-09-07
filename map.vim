@@ -89,19 +89,17 @@ nmap <Space>6 :tabfirst<cr>gtgtgtgtgt
 nmap <Space>7 :tabfirst<cr>gtgtgtgtgtgt
 nmap <Space>8 :tabfirst<cr>gtgtgtgtgtgtgt
 nmap <Space>9 :tabfirst<cr>gtgtgtgtgtgtgtgt
-" Полезности для RoR - быстрые сочетания клавиш для
-" открытия нужных контроллеров, представлений и тп
-nmap <space>m <c-p>model/
-nmap <space><space> <c-p>
-nmap <space>vv <c-p>views/
-nmap <space>vs <c-p>views/show<left><left><left><left>
-nmap <space>ve <c-p>views/edit<left><left><left><left>
-nmap <space>vn <c-p>views/new<left><left><left>
-nmap <space>vi <c-p>views/index<left><left><left><left><left>
-nmap <space>vf <c-p>views/form<left><left><left><left>
-nmap <space>c <c-p>controllers/
-nmap <space>ss <c-p>spec/
-nmap <space>sc <c-p>spec/controllers/
-nmap <space>sm <c-p>spec/models/
-nmap <space>sf <c-p>spec/factories/
-nmap <space>sr <c-p>spec/requests/
+" Сохранение на пробел-s
+nmap <Space>s :w<cr>
+" Включение-выключение нумерации
+nmap <Space>n :set relativenumber!<cr>
+" Переключение между буферами, как между табами
+nmap ;1 :bfirst<cr>
+nmap ;2 :bfirst<cr>:bn<cr>
+nmap ;3 :bfirst<cr>:bn<cr>:bn<cr>
+nmap ;4 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>
+nmap ;5 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
+nmap ;6 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
+nmap ;7 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
+nmap ;8 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
+nmap ;9 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
