@@ -29,6 +29,7 @@ if has("autocmd")
      au! BufRead,BufNewFile *.sass         setfiletype sass
      au! BufRead,BufNewFile *.haml         setfiletype haml
      au! BufRead,BufNewFile *.coffee         setfiletype coffee
+     au! BufRead,BufNewFile *.md         setfiletype markdown
 endif
 " Автоперезагружать измененные файлы
 set autoread
