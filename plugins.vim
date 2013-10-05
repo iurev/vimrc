@@ -1,15 +1,18 @@
 "-----------------------------------------------------------
-" Настройки для Vundle - менеджера плагинов VIM
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle "gmarik/vundle"
+" NeoBundle - улучшенный менеджер плагинов
+if has('vim_starting')
+	set nocompatible
+	set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " EasyMoution
 " Очень удобное перемещение. Лучше всего его смысл объясняет
 " гифка на официальной странице
-Bundle 'EasyMotion'
+NeoBundle 'EasyMotion'
 " Назначил начало перемещения на
 " редкоиспользуемые клавиши
 nmap s \\f
@@ -24,18 +27,19 @@ let g:EasyMotion_keys = "abcdefghpqrstvwxyz.,mnouilkj"
 
 "-----------------------------------------------------------
 " Самое лучшее автозавершение слов
-Bundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " CtrlP - нечеткий поиск по файлам, папкам, буферам, истории
 " отмен
-Bundle 'ctrlp.vim'
+NeoBundle 'ctrlp.vim'
 " Так было сказано сделать в описании к CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Открытие CtrlPBuffer
 nmap <space>b :CtrlPBuffer<cr>
 nmap <space>l :CtrlPLine<cr>
+nmap <space>i :CtrlPBufTag<cr>
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)|tmp$',
   \ 'file': '\v\.(exe|so|dll)$',
@@ -57,7 +61,7 @@ nmap <space>s <c-p>spec/
 
 "-----------------------------------------------------------
 " Комментирование
-Bundle 'tComment'
+NeoBundle 'tComment'
 nmap <C-k> gcc
 vmap ,s gc
 nmap ,s gcc
@@ -66,93 +70,51 @@ nmap ,l gc
 
 "-----------------------------------------------------------
 " Автозакрытие скобочек, эндов и т.д. (оба плагина)
-Bundle 'endwise.vim'
-Bundle 'jiangmiao/auto-pairs'
+NeoBundle 'endwise.vim'
+NeoBundle 'jiangmiao/auto-pairs'
 let g:AutoPairsFlyMode = 0
 let g:AutoPairsShortcutBackInsert = '<A-f>'
-"-----------------------------------------------------------
+" "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 "Переход между бегин-енд и т.д.
-Bundle 'ruby-matchit'
-Bundle 'matchit.zip'
+NeoBundle 'ruby-matchit'
+NeoBundle 'matchit.zip'
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Дерево отмен
-Bundle 'https://github.com/mbbill/undotree.git'
+NeoBundle 'https://github.com/mbbill/undotree.git'
 " Показывает историю отмен при нажатии на <F5>
 nmap <Space>u :UndotreeToggle<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Дерево файлов слева (можно и справа и вообще где угодно)
-Bundle 'The-NERD-tree'
+NeoBundle 'The-NERD-tree'
 nmap <C-n> :NERDTreeToggle<cr>
-"-----------------------------------------------------------
+" "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Клевая вещь - показывает, благодаря гиту, какие строки
 " были добавлены, изменены
-Bundle 'airblade/vim-gitgutter'
+NeoBundle 'airblade/vim-gitgutter'
 nmap <Space>g :GitGutterToggle<enter>
 let g:gitgutter_enabled = 0
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
-" Улучшенная статусная линия
-Bundle 'bling/vim-airline'
-" Замена стандартных табов на табы airline
-let g:airline#extensions#tabline#enabled = 1
-" Чтобы статусная строка отображалась всегда
-set laststatus=2
-let g:airline_theme='solarized'
-" Использовать красивые значки для панели - нужно установить
-" шрифты
-let g:airline_powerline_fonts = 1
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Показывает отступы
-Bundle 'nathanaelkane/vim-indent-guides'
-nmap <space>t \ig
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
 " Удаление текущего буфера без удаления сплитов
-Bundle 'rbgrouleff/bclose.vim'
+NeoBundle 'rbgrouleff/bclose.vim'
 nmap <m-d> :Bclose<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
-" Удобные плагины для режима выделения:
-" ar расширяет текущее выделение,
-" ir - сужает
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Файловый менеджер. Умеет копировать, перемещать,
-" переименовывать, показывать (или скрывать) скрытые файлы,
-" вставлять, показывать предпросмотр. То есть, все то, что
-" должен уметь файловый менеджер.
-Bundle 'mbbill/VimExplorer'
-nmap <Space>e :VE<cr>
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Поиск
-Bundle 'mileszs/ack.vim'
-nmap <Space>a :Ack<space>
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
 " Избранные цветовые схемы для VIM.
-Bundle 'tomasr/molokai'
-Bundle 'altercation/vim-colors-solarized'
-Bundle '29decibel/codeschool-vim-theme'
-Bundle 'oceanlight'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'altercation/vim-colors-solarized'
+" NeoBundle '29decibel/codeschool-vim-theme'
+" NeoBundle 'oceanlight'
 " Кроме них мне также нравятся obsidian2,
 " oceanlight, night, inkpot, maroloccio,
 " manuscript, jellybeans, Lavender, Iceberg,
@@ -162,83 +124,57 @@ Bundle 'oceanlight'
 "-----------------------------------------------------------
 " Работа с окружающими парными символами
 " и тегами в VIM
-Bundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 nmap ," cs'"
 nmap ,' cs"'
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Автосохранение
-Bundle 'vim-auto-save'
+NeoBundle 'vim-auto-save'
 let g:auto_save = 1
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Rails
-Bundle 'tpope/vim-rails'
-Bundle 'rails.vim'
+NeoBundle 'tpope/vim-rails'
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Переключение true-false, старого и нового стилей
 " хэшей в Ruby
-Bundle 'zef/vim-cycle'
+NeoBundle 'zef/vim-cycle'
 "-----------------------------------------------------------
 
 " Автоподсветка поиска
-Bundle 'IndexedSearch'
+NeoBundle 'IndexedSearch'
 
 " Какие-то улучшения для Ruby
-Bundle 'vim-ruby/vim-ruby'
-
-" Плагин для рельс
-Bundle 'rails.vim'
+NeoBundle 'vim-ruby/vim-ruby'
 
 " Улучшенная подсветка синтаксиса Javascript
-Bundle 'https://github.com/jelera/vim-javascript-syntax.git'
+NeoBundle 'jelera/vim-javascript-syntax.git'
 
 " Отступы Javascript и т.п.
-Bundle "pangloss/vim-javascript"
+NeoBundle "pangloss/vim-javascript"
 
 " HAML. HAML это вам не HTML!
-Bundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-haml'
 
 " Работа с CoffeeScript
-Bundle 'kchmck/vim-coffee-script'
-
-" Проверка синтаксиса
-Bundle 'scrooloose/syntastic'
-
-" Много-много сниппетов для самых разных языков
-" ( после их установки обязательно нужно удалить
-" стандартные сниппеты, чтобы они не конфликтовали )
-Bundle 'honza/vim-snippets'
-
-" Удобное разворачивание текущего буфера на весь экран
-" и сворачивание. Активируется по нажатию <C-w>o
-Bundle 'ZoomWin'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " Работа с Git
-Bundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
+nmap <Space>gs :Gstatus<cr>
+nmap <Space>gw :Gwrite<cr>
+nmap <Space>gr :Gread<cr>
+nmap <Space>gd :Gdiff<cr>
+nmap <Space>gc :Gcommit<cr>
 
 " Работа с форматом rabl
-Bundle 'yaymukund/vim-rabl'
-
-" Удобные отступы по запятым, двоеточиям, табам и т.п
-Bundle 'junegunn/vim-easy-align'
-
-" Увеличение-уменьшение числа под курсором
-Bundle 'Increment-and-Decrement-number'
+NeoBundle 'yaymukund/vim-rabl'
 
 " Изменено поведение клавиш F, f, t, T
 " а также освободились ';' и ','
-Bundle 'rhysd/clever-f.vim'
-
-" Автодополнение из Eclipse для Ruby
-Bundle 'dansomething/vim-eclim'
-
-" Повторение для surround VIM
-Bundle 'tpope/vim-repeat'
-
-" Делает исходные коды красивыми и няшными одним нажатием клавиш
-Bundle 'maksimr/vim-jsbeautify'
+NeoBundle 'rhysd/clever-f.vim'
