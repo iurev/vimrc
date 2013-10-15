@@ -178,3 +178,5 @@ NeoBundle 'yaymukund/vim-rabl'
 " Изменено поведение клавиш F, f, t, T
 " а также освободились ';' и ','
 NeoBundle 'rhysd/clever-f.vim'
+
+NeoBundle 'jayferd/eco.vim'

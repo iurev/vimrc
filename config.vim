@@ -16,7 +16,8 @@ if has("autocmd")
      " Включаем определение типов файлов
      filetype off
      " Для отличных от стандартных типов файлов устанавливаем различные отступы
-     autocmd FileType html setlocal ts=2 sts=2 sw=2 noet
+     set ts=2 sts=2 sw=2 expandtab
+     autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType php setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType eruby setlocal ts=2 sts=2 sw=2 noet

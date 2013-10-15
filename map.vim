@@ -78,7 +78,7 @@ nmap <c-t> :tabnew<cr>
 " Открытие файла с заметками по проекту
 " теперь очень часто держу заметки в корне
 " проекта
-nmap <F3> :e plan.txt<cr>
+nmap <F3> :e plan.md<cr>
 " Переключение на вкладку по ее номеру.
 nmap <Space>1 :tabfirst<cr>
 nmap <Space>2 :tabfirst<cr>gt
@@ -103,3 +103,5 @@ nmap ;6 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;7 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;8 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;9 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
+" Перейти к определению функции
+nmap <Space>f <C-]>
