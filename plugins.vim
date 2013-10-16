@@ -57,6 +57,8 @@ nmap <space>vi <c-p>views/index<left><left><left><left><left>
 nmap <space>vf <c-p>views/form<left><left><left><left>
 nmap <space>c <c-p>controllers/
 nmap <space>s <c-p>spec/
+NeoBundle 'ivalkeen/vim-ctrlp-tjump'
+nmap <Space>F :CtrlPtjump<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------

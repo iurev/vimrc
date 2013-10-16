@@ -21,7 +21,7 @@ if has("autocmd")
      autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType php setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType eruby setlocal ts=2 sts=2 sw=2 noet
-     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 noet
+     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType haml setlocal ts=2 sts=2 sw=2 expandtab
      autocmd FileType sass setlocal ts=2 sts=2 sw=2 noet
      autocmd FileType coffee setlocal ts=2 sts=2 sw=2 expandtab
@@ -69,3 +69,5 @@ set shell=zsh\ -i
 " верхней-нижней линий
 set scrolloff=5
 " Теперь слова, разделенные нижним подчеркиванием, не являются одним словом
+"
+set tags+=gems.tags
