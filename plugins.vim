@@ -115,7 +115,7 @@ nmap <m-d> :Bclose<cr>
 " Избранные цветовые схемы для VIM.
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle '29decibel/codeschool-vim-theme'
+NeoBundle '29decibel/codeschool-vim-theme'
 " NeoBundle 'oceanlight'
 " Кроме них мне также нравятся obsidian2,
 " oceanlight, night, inkpot, maroloccio,
@@ -134,7 +134,7 @@ nmap ,' cs"'
 "-----------------------------------------------------------
 " Автосохранение
 NeoBundle 'vim-auto-save'
-let g:auto_save = 1
+let g:auto_save = 0
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
