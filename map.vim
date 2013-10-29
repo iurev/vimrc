@@ -120,11 +120,11 @@ nmap ;g <S-g>
 " Ну, тут все ясно, в Ruby точка-с-запятой редко используется,
 " а на Shift жать долго. Потом нужно будет сделть так, чтобы
 " это было доступно только в Ruby
-imap ;a @ " a
-imap ;e = " equal
-imap ;b ( " brackets
-imap ;s [ " square
-imap ;q ? " query
-imap ;c ! " cry
-imap ;p + " plus
-imap ;u _ " underline
+imap ;a @
+imap ;e =
+imap ;b (
+imap ;s [
+imap ;q ?
+imap ;c !
+imap ;p +
+imap ;u _
