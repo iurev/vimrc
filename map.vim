@@ -105,3 +105,20 @@ nmap ;8 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;9 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 " Перейти к определению функции
 nmap <Space>f <C-]>
+" В начало строки
+nmap ;b ^
+" В конец строки
+nmap ;e $
+" В самое начало строки
+nmap ;o 0
+" Поправить отступы - 5 строк вниз, 5 строк вверх
+nmap ;i 5k=10j5j
+" Ну, тут все ясно, в Ruby точка-с-запятой редко используется,
+" а на Shift жать долго. Потом нужно будет сделть так, чтобы
+" это было доступно только в Ruby
+imap ;a @
+imap ;e =
+imap ;b (
+imap ;s [
+imap ;q ?
+imap ;c !
