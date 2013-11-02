@@ -93,38 +93,7 @@ nmap <Space>9 :tabfirst<cr>gtgtgtgtgtgtgtgt
 nmap <Space>s :w<cr>
 " Включение-выключение нумерации
 nmap <Space>n :set relativenumber!<cr>
-" Переключение между буферами, как между табами
-nmap ;1 :bfirst<cr>
-nmap ;2 :bfirst<cr>:bn<cr>
-nmap ;3 :bfirst<cr>:bn<cr>:bn<cr>
-nmap ;4 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>
-nmap ;5 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
-nmap ;6 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
-nmap ;7 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
-nmap ;8 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
-nmap ;9 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 " Перейти к определению функции
-nmap <Space>f <C-]>
-" В начало строки
-nmap ;b ^
-" В конец строки
-nmap ;e $
-" В самое начало строки
-nmap ;o 0
+nmap <Space>d <C-]>
 " Поправить отступы - 5 строк вниз, 5 строк вверх
-nmap ;i 5k=10j5j
-nmap ;p %
-nmap ;v <S-v>
-" Перейти в конец строки
-nmap ;g <S-g>
-" Ну, тут все ясно, в Ruby точка-с-запятой редко используется,
-" а на Shift жать долго. Потом нужно будет сделть так, чтобы
-" это было доступно только в Ruby
-imap ;a @
-imap ;e =
-imap ;b (
-imap ;s [
-imap ;q ?
-imap ;c !
-imap ;p +
-imap ;u _
+nmap ,i 5k=10j5j
