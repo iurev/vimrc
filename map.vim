@@ -78,7 +78,7 @@ nmap <c-t> :tabnew<cr>
 " Открытие файла с заметками по проекту
 " теперь очень часто держу заметки в корне
 " проекта
-nmap <F3> :e plan.txt<cr>
+nmap <F3> :e plan.md<cr>
 " Переключение на вкладку по ее номеру.
 nmap <Space>1 :tabfirst<cr>
 nmap <Space>2 :tabfirst<cr>gt
@@ -103,3 +103,28 @@ nmap ;6 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;7 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;8 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
 nmap ;9 :bfirst<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>:bn<cr>
+" Перейти к определению функции
+nmap <Space>f <C-]>
+" В начало строки
+nmap ;b ^
+" В конец строки
+nmap ;e $
+" В самое начало строки
+nmap ;o 0
+" Поправить отступы - 5 строк вниз, 5 строк вверх
+nmap ;i 5k=10j5j
+nmap ;p %
+nmap ;v <S-v>
+" Перейти в конец строки
+nmap ;g <S-g>
+" Ну, тут все ясно, в Ruby точка-с-запятой редко используется,
+" а на Shift жать долго. Потом нужно будет сделть так, чтобы
+" это было доступно только в Ruby
+imap ;a @
+imap ;e =
+imap ;b (
+imap ;s [
+imap ;q ?
+imap ;c !
+imap ;p +
+imap ;u _

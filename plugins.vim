@@ -57,6 +57,8 @@ nmap <space>vi <c-p>views/index<left><left><left><left><left>
 nmap <space>vf <c-p>views/form<left><left><left><left>
 nmap <space>c <c-p>controllers/
 nmap <space>s <c-p>spec/
+NeoBundle 'ivalkeen/vim-ctrlp-tjump'
+nmap <Space>F :CtrlPtjump<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
@@ -113,7 +115,7 @@ nmap <m-d> :Bclose<cr>
 " Избранные цветовые схемы для VIM.
 NeoBundle 'tomasr/molokai'
 NeoBundle 'altercation/vim-colors-solarized'
-" NeoBundle '29decibel/codeschool-vim-theme'
+NeoBundle '29decibel/codeschool-vim-theme'
 " NeoBundle 'oceanlight'
 " Кроме них мне также нравятся obsidian2,
 " oceanlight, night, inkpot, maroloccio,
@@ -127,12 +129,6 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-surround'
 nmap ," cs'"
 nmap ,' cs"'
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Автосохранение
-NeoBundle 'vim-auto-save'
-let g:auto_save = 1
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
@@ -178,3 +174,5 @@ NeoBundle 'yaymukund/vim-rabl'
 " Изменено поведение клавиш F, f, t, T
 " а также освободились ';' и ','
 NeoBundle 'rhysd/clever-f.vim'
+
+NeoBundle 'jayferd/eco.vim'
