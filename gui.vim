@@ -15,10 +15,10 @@ set guioptions-=m " отключаем меню
 set guifont=monofur\ for\ Powerline\ 17
 " Включить нумерацию строк слева
 :set number
-"При запуске гуишный vim раскрывается на весь экран
+" Размер окна VIM при запуске
 if has("gui_running")
-	au GUIEnter * :set lines=99999 columns=99999
-end
+  set lines=30 columns=100
+endif
 " Показывать вводимые после ":" комманды без задержки
 set showcmd
 " Включена поддержка синтаксиса

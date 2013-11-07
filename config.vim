@@ -50,8 +50,6 @@ set iminsert=0
 set imsearch=0
 " Для вставки использовать системный буфер обмена
 set clipboard=unnamed
-" Все комманды выполняются из zsh
-set shell=zsh\ -i
 " При скроллинге VIM будет держать курсор всегда на 5 строк выше
 " верхней-нижней линий
 set scrolloff=5
