@@ -50,9 +50,11 @@ set iminsert=0
 set imsearch=0
 " Для вставки использовать системный буфер обмена
 set clipboard=unnamed
-" Все комманды выполняются из zsh
-set shell=zsh\ -i
 " При скроллинге VIM будет держать курсор всегда на 5 строк выше
 " верхней-нижней линий
 set scrolloff=5
-" Теперь слова, разделенные нижним подчеркиванием, не являются одним словом
+" Настройки для встроенного файлового менеджера Netrw
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_banner = 0
+let g:netrw_liststyle=3

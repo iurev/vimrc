@@ -19,3 +19,8 @@ NeoBundle 'yaymukund/vim-rabl'
 " Eco templates
 NeoBundle 'jayferd/eco.vim'
 
+" Slim
+NeoBundle 'gudleik/vim-slim'
+
+" Less
+NeoBundle 'groenewege/vim-less'
