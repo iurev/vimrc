@@ -53,4 +53,8 @@ set clipboard=unnamed
 " При скроллинге VIM будет держать курсор всегда на 5 строк выше
 " верхней-нижней линий
 set scrolloff=5
-" Теперь слова, разделенные нижним подчеркиванием, не являются одним словом
+" Настройки для встроенного файлового менеджера Netrw
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_banner = 0
+let g:netrw_liststyle=3

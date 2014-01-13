@@ -14,6 +14,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'ctrlp.vim'
 NeoBundle 'ivalkeen/vim-ctrlp-tjump'
 nmap <Space>D :CtrlPtjump<cr>
+nmap <Space><Space> :CtrlP<cr>
 "-----------------------------------------------------------
 
 "-----------------------------------------------------------
@@ -45,24 +46,6 @@ NeoBundle 'https://github.com/mbbill/undotree.git'
 " Показывает историю отмен при нажатии на <F5>
 nmap <Space>U :UndotreeToggle<cr>
 "-----------------------------------------------------------
-
-"-----------------------------------------------------------
-NeoBundle 'Shougo/unite.vim'
-" Плагины для Unite
-" Теги
-NeoBundle 'h1mesuke/unite-outline'
-" Выбор цветовой схемы
-NeoBundle 'ujihisa/unite-colorscheme'
-" Настройки здесь
-source ~/.vim/conf/plugins_settings/unite.vim
-"-----------------------------------------------------------
-
-"-----------------------------------------------------------
-" Дерево файлов + файловый менеджер
-NeoBundle 'Shougo/vimfiler.vim'
-nmap <Space>f :VimFilerExplorer<CR>
-nmap <Space>F :VimFiler<CR>
-" "-----------------------------------------------------------
 
 "-----------------------------------------------------------
 " Удаление текущего буфера без удаления сплитов
